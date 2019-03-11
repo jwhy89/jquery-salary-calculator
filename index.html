@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="scripts/jQuery.js" charset="utf-8"></script>
     <script src="scripts/script.js" charset="utf-8"></script>
-    <title>jQuery Review</title>
+    <title>Weekend Challenge #1</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
@@ -14,14 +14,20 @@
 
 <body>
     <main>
-        <h1>Atbash Pets</h1>
+        <h1>Salary Calculator</h1>
         <section>
-            <h2>Add a Pet</h2>
+            <h2>Add Employee</h2>
             <form>
-                <label>Name:</label>
-                <input id="in-pet" type="text" />
-                <label>Owner</label>
-                <input id="in-owner" type="text" />
+                <label>First Name:</label>
+                <input id="in-firstName" type="text" required/>
+                <label>Last Name</label>
+                <input id="in-lastName" type="text" required/>
+                <label>ID:</label>
+                <input id="in-idNumber" type="number" required/>
+                <label>Title</label>
+                <input id="in-title" type="text" required/>
+                <label>Annual Salary</label>
+                <input id="in-Salary" type="number" required/>
                 <button id="btn-add-pet">Submit</button>
             </form>
         </section>
