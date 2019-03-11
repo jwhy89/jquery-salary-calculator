@@ -1,5 +1,5 @@
 // create empty constant array
-const employeeList = [];
+const employeeTable = [];
 
 // This says to run readNow when the DOM is loaded
 $(document).ready(readyNow);
@@ -26,7 +26,7 @@ function addEmployee() {
     let employee = getEmployeeTableData();
 
     // Add new pet to array
-    employeeList.push(employee);
+    employeeTable.push(employee);
 
     // Once pet is added successfully, clear form
     clearEmployeeTable();
@@ -46,7 +46,7 @@ function getEmployeeTableData() {
     return employee;
 }
 
-function clearEmployeeForm() {
+function clearEmployeeTable() {
     $('#in-firstName').val('');
     $('#in-lastName').val('');
     $('#in-idNumber').val('');
@@ -55,15 +55,15 @@ function clearEmployeeForm() {
 }
 
 function render() {
-    // Empty the existing ul
-    $('#employee-list').empty();
+    // Empty the existing table
+    $('#employee-table').empty();
 
-    // Loop through the petList array, and li for each pet
-    for (let employee of employeeList) {
-        // add class pet used for the class pet
-        let $li = $(`<li class="employee">${pet.name} belongs to ${pet.owner}.</li>`);
-        $li.data(pet);
-        console.log($li.data());
-        $('#pet-list').append($li);
+    // Loop through the employeeTable array, and add row for each employee
+    for (let employee of employeeTable) {
+        // add class employee used for the class employee
+        let $td = $(<td class="employee">${employee.firstName}</td>);
+        $td.data(employee);
+        console.log($td.data());
+        $('#employee-list').append($td);
     }
 }
