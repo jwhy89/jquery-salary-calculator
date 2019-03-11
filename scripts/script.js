@@ -61,9 +61,12 @@ function render() {
     // Loop through the employeeTable array, and add row for each employee
     for (let employee of employeeTable) {
         // add class employee used for the class employee
-        let $td = $(<td class="employee">${employee.firstName}</td>);
-        $td.data(employee);
-        console.log($td.data());
-        $('#employee-list').append($td);
+        $('#employee-table').append(`
+            <td id="rows">${employee.firstName}</td>
+            <td id="rows">${employee.lastName}</td>
+            <td id="rows">${employee.id}</td>
+            <td id="rows">${employee.title}</td>
+            <td id="rows">${employee.salary}</td>
+        `);
     }
 }
